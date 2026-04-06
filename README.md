@@ -1,99 +1,91 @@
-# Visit My Cities
+## Bienvenue ! 👋
 
-## Welcome! 👋
-
-Thanks for checking out this bachelor's degree project.
+Merci de consulter ce projet de fin de licence.
 
 <div>
   <img width="275" height="596" alt="Screenshot_1772996691" src="frontend/assets/screenshots/HomeScreen.png" />
 <img width="275" height="596" alt="Screenshot_1772996707" src="frontend/assets/screenshots/HomeScreen2.png" />
 </div>
 <br>
-(More screenshots down below)
+(Plus de captures d'écran ci-dessous)
 
-## The Project
+## Le Projet
 
-The Visit My Cities project catalogs the various notable buildings in each city. A mobile application allows visitors to plan their visits during their time in a city. Visitors can view buildings based on their preferences (year of construction, architectural style, categories). An expert user has the possibility to add new buildings. Each building has plenty of useful informations to plan a visit.
+Le projet Visit My Cities répertorie les différents bâtiments remarquables de chaque ville. Une application mobile permet aux visiteurs de planifier leurs visites lors de leur séjour dans une ville. Les visiteurs peuvent consulter les bâtiments selon leurs préférences (année de construction, style architectural, catégories). Un utilisateur expert a la possibilité d'ajouter de nouveaux bâtiments. Chaque bâtiment dispose de nombreuses informations utiles pour organiser une visite.
 
-## License ❗
+## Licence ❗
 
-- The source code is publicly visible for evaluation purposes only and may
-  not be reused without explicit prior permission.
-  
-## Getting Started
+- Le code source est publiquement visible à des fins d'évaluation uniquement et ne peut
+  pas être réutilisé sans autorisation préalable explicite.
 
-### Running the Visit My Cities Application
+## Démarrage
 
-To run the **Visit My Cities** application locally, you first need to start the database services using Docker. The project uses a container that includes **MySQL** and **phpMyAdmin**.
+### Lancer l'application Visit My Cities
 
-Start the containers with:
+Pour lancer l'application **Visit My Cities** en local, vous devez d'abord démarrer les services de base de données via Docker. Le projet utilise un conteneur qui inclut **MySQL** et **phpMyAdmin**.
 
-```bash
+Démarrez les conteneurs avec :
+
 docker-compose up -d
-```
 
-This will launch the MySQL database as well as phpMyAdmin, allowing you to manage the database from your browser.
 
-Once the database is running, start the REST API using a tool such as IntelliJ.
+Cela lancera la base de données MySQL ainsi que phpMyAdmin, vous permettant de gérer la base de données depuis votre navigateur.
 
-Once the containers and the REST API are running, you can start the front-end application.
+Une fois la base de données lancée, démarrez l'API REST avec un outil tel qu'IntelliJ.
 
-From the frontend project directory:
+Une fois les conteneurs et l'API REST en cours d'exécution, vous pouvez démarrer l'application front-end.
 
-```bash
+Depuis le répertoire du projet frontend :
 npm install
 npm run start
-```
 
-This will start the development server.
+Cela démarrera le serveur de développement.
 
-### Running the application
+### Lancer l'application
 
-You can run the application in two different ways:
+Vous pouvez lancer l'application de deux façons :
 
-**1. Using Android Studio or iOS Simulator**
-Open an Android emulator from Android Studio or an iOS simulator from Xcode and run the project. The app will automatically connect to the local development server.
+**1. Avec Android Studio ou le simulateur iOS**
+Ouvrez un émulateur Android depuis Android Studio ou un simulateur iOS depuis Xcode et lancez le projet. L'application se connectera automatiquement au serveur de développement local.
 
-**2. Using your physical phone**
-If you want to run the application on your own phone, you must configure the environment variables correctly.
+**2. Avec votre téléphone physique**
+Si vous souhaitez lancer l'application sur votre propre téléphone, vous devez configurer correctement les variables d'environnement.
 
-In particular, you need to replace the API_URL with **your computer's local IP address**, otherwise the phone will not be able to reach the server.
+En particulier, vous devez remplacer l'API_URL par **l'adresse IP locale de votre ordinateur**, sinon le téléphone ne pourra pas atteindre le serveur.
 
-For example:
+Par exemple :
 
-```
 EXPO_PUBLIC_API_URL_TELEPHONE=http://192.168.X.X:8080
-```
-Once the environment variables are configured, restart the development server and scan the QR code (or run the app) from your device.
 
-**The functionalities are :**
-- Display a list of popular cities and buildings
-- Display a list of building categories
-- Show buildings/places for each city with name and image
-- View detailed information for each building (address, opening hours, description, key info, visit info, location)
-- Navigate between buildings and cities within the app
-- Maintain a list of favorite cities and buildings
-- Add a city or building to the favorites list
-- View a map with building location
-- Basic user profile display (view own information)
-- Sign in and sign up functionality (mainly useful for expert users at the moment)
-- Add new buildings via the form (front-end submission + back-end handling)
-- Display a route from your current location to the building using Google Maps
+Une fois les variables d'environnement configurées, redémarrez le serveur de développement et scannez le QR code (ou lancez l'application) depuis votre appareil.
 
-**The functionalities in building :**
+**Les fonctionnalités disponibles :**
+- Afficher une liste de villes et bâtiments populaires
+- Afficher une liste de catégories de bâtiments
+- Afficher les bâtiments/lieux pour chaque ville avec nom et image
+- Consulter les informations détaillées de chaque bâtiment (adresse, horaires d'ouverture, description, informations clés, informations de visite, localisation)
+- Naviguer entre les bâtiments et les villes dans l'application
+- Gérer une liste de villes et bâtiments favoris
+- Ajouter une ville ou un bâtiment aux favoris
+- Afficher une carte avec la localisation du bâtiment
+- Affichage basique du profil utilisateur (voir ses propres informations)
+- Fonctionnalité de connexion et d'inscription (principalement utile pour les utilisateurs experts)
+- Ajouter de nouveaux bâtiments via le formulaire (soumission front-end + traitement back-end)
+- Afficher un itinéraire depuis votre position actuelle jusqu'au bâtiment via Google Maps
 
-- Add the favorite button on place cards
-- Make the search bar work
-- Add filter and sort functionality
-- Create a V2 VisitScreen with the possibility to group buildings by city
-- Implement the planning functionality to create a route between buildings in a city
-- ProfileScreen with more information (editing personal details)
-- Make a more elaborate external back-office, or add delete and edit functionality for buildings and cities
-- Add a full-screen map in BuildingDetailScreen to show the user’s current location
-- Add the possibility to open a route with Apple Maps
-- Allow users to suggest a new building
-  
-**Stacks used :**
+**Les fonctionnalités en cours de développement :**
+- Ajouter le bouton favori sur les cartes de lieux
+- Faire fonctionner la barre de recherche
+- Ajouter les fonctionnalités de filtre et de tri
+- Créer un écran de visite V2 avec la possibilité de regrouper les bâtiments par ville
+- Implémenter la fonctionnalité de planification pour créer un itinéraire entre les bâtiments d'une ville
+- Écran de profil avec plus d'informations (modification des informations personnelles)
+- Créer un back-office externe plus élaboré, ou ajouter les fonctionnalités de suppression et modification pour les bâtiments et les villes
+- Ajouter une carte en plein écran dans l'écran de détail du bâtiment pour afficher la position de l'utilisateur
+- Ajouter la possibilité d'ouvrir un itinéraire avec Apple Maps
+- Permettre aux utilisateurs de suggérer un nouveau bâtiment
+
+**Technologies utilisées :**
 - React Native (Zustand, Expo, React Hook Form)
 - Spring Boot
 - MySQL
@@ -101,7 +93,7 @@ Once the environment variables are configured, restart the development server an
 - Postman
 - Docker
 
-## Screenshots : ##
+## Captures d'écran : ##
 
 <div>
   <img width="275" height="596" alt="Screenshot_1772996691" src="frontend/assets/screenshots/Explorer.png" />
@@ -124,5 +116,3 @@ Once the environment variables are configured, restart the development server an
   <img width="275" height="596" alt="Screenshot_1772996707" src="frontend/assets/screenshots/ProfileScreen.png" />
   <img width="275" height="596" alt="Screenshot_1772996707" src="frontend/assets/screenshots/ProfileScreenLogged.png" />
 </div>
-
-
